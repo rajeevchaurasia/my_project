@@ -1,0 +1,8 @@
+<h1>Welcome to student teacher application</h1>
+<%if current_user%>
+  <%if current_user.role=="Teacher"%>
+    <%= link_to "Create cources", new_user_cource_path(current_user), class: "btn btn-success"%>
+  <%else%>
+    <%= link_to "View cources", user_cources_path(current_user), class: "btn btn-primary"%>
+  <%end%>
+<%end%>  

@@ -1,0 +1,16 @@
+<h1>Listing Cources</h1>
+ 
+<table class="table-striped">
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @courses.each do |course| %>
+    <tr>
+      <td><%= course.title %></td>
+      <td><%= course.body %></td>
+      <td><%= link_to 'Show', user_cource_path(@current_person, course), class: "btn btn-primary" %></td>
+    </tr>
+  <% end %>
+</table>
